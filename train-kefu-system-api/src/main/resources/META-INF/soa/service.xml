@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <metadata>
+    <name>TrainKefuSystemService</name>
+    <namespace>http://soa.ctrip.com/framework/soa/trainkefusystemservice/v1</namespace>
+  </metadata>
+</service>

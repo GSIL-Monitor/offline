@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>kefu-system</artifactId>
+        <groupId>com.ctrip.train.kefu.system</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ctrip.train.kefu.system</groupId>
+    <artifactId>train-kefu-system-generation</artifactId>
+    <version>1.0.0</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ctrip.framework.clogging</groupId>
+            <artifactId>clogging-agent</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ctrip.platform</groupId>
+            <artifactId>ctrip-datasource</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ctrip.platform</groupId>
+            <artifactId>ctrip-dal-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

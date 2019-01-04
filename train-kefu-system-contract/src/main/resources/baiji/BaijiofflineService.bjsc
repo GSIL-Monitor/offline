@@ -1,0 +1,382 @@
+include 'BaijiCommonTypes.bjsc'
+namespace java 'com.ctrip.train.kefu.system.api'
+
+class GetIVRPredictingUserBehaviorRequestType{
+    string mobileNumber;
+    string ani;
+    string operType;
+    string orderDateString;
+    string partnerName;
+    string callId;
+    string version;
+}
+
+class GetIVRPredictingUserBehaviorResponseType{
+    list<BroadcastMedia> broadcastMediaList;
+    string operType;
+    string resultCode;
+    string resultMessage;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class IVRUserSelfServiceRequestType{
+    string ani;
+    string callId;
+    string operTag;
+    string version;
+}
+
+class IVRUserSelfServiceResponseType{
+    list<BroadcastMedia> broadcastMediaList;
+    string operType;
+    string resultCode;
+    string resultMessage;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class IVRUserTransferLogRequestType{
+    string ani;
+    string callId;
+}
+
+class IVRUserTransferLogResponseType{
+    string resultCode;
+    string resultMessage;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class BroadcastMedia{
+    string operTag;
+    Media media;
+    string DTMF;
+    int orderNo;
+    TransferInfo transferInfo;
+}
+
+class Media{
+    string mediaType;
+    string text;
+}
+
+class TransferInfo{
+    int waitTimeSec;
+    string outSourceGroupVdn;
+    string transferType;
+    string transferText;
+    int transferStatus;
+}
+
+class StaffPermissionRequestType{
+    string eid;
+    string permissionCode;
+}
+
+class StaffPermissionResponseType{
+    bool  hasPermission;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class SendNoticeRequestType{
+    string orderID;
+    string contactUser;
+    string contactPhone;
+    int noticeSource;
+    string appointedProcessTime;
+    int emergeState;
+    int envenType;
+    int noticeType;
+    int noticeSecondType;
+    string contents;
+    int orderType;
+    string productLine;
+    string channelSource;
+    string enterUser;
+}
+class SendNoticeResponseType{
+    int  code;
+    string msg;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class NoticeExisRequestType{
+    string orderID;
+    int noticeSource;
+    int  noticeType;
+    int noticeSecondType;
+    string enterUser;
+}
+
+class NoticeExisResponseType{
+    bool  exis;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class GetVendorNoticeListRequest{
+    int pageIndex;
+    int pageSize;
+    Condition condition; 
+}
+
+class Condition{
+    string vendorCode;
+    string  orderId;
+    string sendName;
+    string sendType;
+    int noticeState;
+    int noticeType;
+    int opUserType;
+    //1 催单 2 紧急工单 3 一般工单
+    int noticeStatus;
+    string startTime; 
+    string endTime;
+}
+
+class GetVendorNoticeListRespose{
+    int pageIndex;
+    int pageSize;
+    int count;
+    list<VendorNotice> vendorNotice;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+    
+} 
+
+class VendorNotice{
+    long id;
+    long noticeId;
+    int emergeState;
+    string  orderId;
+    int noticeType;
+    string noticeTypeName;
+    int noticeSecondType;
+    string noticeSecondTypeName;
+    int noticeState;
+    int opCount;
+    int opUseTyper;
+    string opUser;
+    string opTime;
+    string vendorCode;
+    string vendorName;
+    string contents;
+    int sendType;
+    string sendCode;
+    string sendName;
+    string sendTime;
+    string appointedProcessTime;
+    string completeTime;
+    list <Operate>  operateInfos ;
+}
+
+class GetPendingVendorNoticeRequest{
+    string  vendorCode;
+}
+
+class GetPendingVendorNoticeRespose{
+   list<VendorNotice> vendorNotice;
+   BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class getVendorNoticeRequest{
+   long  noticeId;
+}
+
+class getVendorNoticeRespose{
+   VendorNotice  vendorNotice;
+   BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class sendVendorNoticeRequest{
+   VendorNotice vendorNotice;
+}
+
+class sendVendorNoticeRespose{
+   bool  result;
+   string message;
+   BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class getScmEnumRequest{
+  string productLine;
+}
+
+class getScmEnumRespose{
+   list <ScmEnum> scmEnum;
+   BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class ScmEnum{
+   long  tid;
+   string fieldType;
+   string fieldName;
+   string fieldValue;
+   long fkUpperTid
+}
+
+class getNoticeOperateRequest{
+   long  noticeId;
+}
+
+class getNoticeOperateRespose{
+   list <Operate>  operateInfo ;
+   BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class  Operate{
+   long  id;
+   string  operateTime;
+   long noticeId;
+   string operateUser;
+   string operateComment;
+   int operateType;
+}
+
+
+class addNoticeOperateRequest{
+   Operate  operate;
+}
+
+class addNoticeOperateRespose{
+   bool   result ;
+   BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class getVendorUserInfoRequest{
+   string  userName;
+   string  password;
+}
+
+class getVendorUserInfoRespose{
+    VendorUserInfo userInfo;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class VendorUserInfo{
+     string userName;
+     string password;
+     string userNum;
+     string telephone;
+     string email;
+     string realName;
+     string userType;
+     string vendorCode;
+     string vendorName;
+}
+
+class addVendorUserInfoRequest{
+   VendorUserInfo userInfo;
+}
+
+class addVendorUserInfoRespose{
+    bool  result;
+    string msg;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class FlightExOrderRequsetType{
+    string orderID;
+    string supplier;
+    string sendOrderTime;
+    string takeoffTime;
+    string latestTicketingTime;
+    int exOrderType;
+    string processingRemark;
+    string enterUser;
+    int productLine;
+}
+class FlightExOrderResponseType{
+    int  code;
+    string msg;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+class QueryTwoTaskOrderStateRequsetType{
+    string partnerOrderId;
+}
+class QueryTwoTaskOrderStateResponseType{
+    int  code;
+    string msg;
+    string processingState;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class OfflineUpdateFlightContactRequestType
+{
+    string orderId;
+    string mobilePhone;
+    string eid;
+}
+
+class OfflineUpdateFlightContactResponseType
+{
+    int  code;
+    string msg;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class ReminderKefuNoticeRequestType
+{
+    long noticeId;
+    string contents
+}
+
+class ReminderKefuNoticeResponseType
+{
+    bool isSuccess;
+    string msg;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class ReminderVendorNoticeRequestType
+{
+    long noticeId;
+    string contents
+}
+
+class ReminderVendorNoticeResponseType
+{
+    bool isSuccess;
+    string msg;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+class getVendorNoticeNumRequest
+{
+    string vendorCode;
+    int opUserType;
+}
+
+class getVendorNoticeNumResponse{
+    int pendingNum;
+    int repliedNum;
+    int opCountNum;
+    int emergeStateNum;
+    int numalNum;
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+}
+
+@serviceName='TrainOfflineService'
+@serviceNamespace='http://soa.ctrip.com/train/TrainOffline/v1'
+service TrainOfflineService {
+    /*checkHealth*/
+    BaijiCommonTypes.CheckHealthResponseType checkHealth(BaijiCommonTypes.CheckHealthRequestType request);
+
+    GetIVRPredictingUserBehaviorResponseType getIVRPredictingUserBehavior(GetIVRPredictingUserBehaviorRequestType request);
+    IVRUserSelfServiceResponseType iVRUserSelfService(IVRUserSelfServiceRequestType request);
+    IVRUserTransferLogResponseType iVRUserTransferLog(IVRUserTransferLogRequestType request);
+    StaffPermissionResponseType staffPermission(StaffPermissionRequestType request);
+    SendNoticeResponseType sendNotice(SendNoticeRequestType request);
+    NoticeExisResponseType noticeExis(NoticeExisRequestType request);
+    GetVendorNoticeListRespose getVendorNoticeList(GetVendorNoticeListRequest request);
+    GetPendingVendorNoticeRespose getPendingVendorNotice(GetPendingVendorNoticeRequest request);
+    getVendorNoticeRespose getVendorNotice(getVendorNoticeRequest request);
+    getVendorUserInfoRespose getVendorUserInfo(getVendorUserInfoRequest request);
+    addVendorUserInfoRespose addVendorUserInfo(addVendorUserInfoRequest request);
+    sendVendorNoticeRespose sendVendorNotice(sendVendorNoticeRequest request);
+    getScmEnumRespose getScmEnum(getScmEnumRequest request);
+    getNoticeOperateRespose getNoticeOperate(getNoticeOperateRequest request);
+    addNoticeOperateRespose addNoticeOperate(addNoticeOperateRequest request);
+    FlightExOrderResponseType sendFlightExOrder(FlightExOrderRequsetType request);
+    QueryTwoTaskOrderStateResponseType queryTwoTaskOrderByOrderId(QueryTwoTaskOrderStateRequsetType request);
+    OfflineUpdateFlightContactResponseType offlineUpdateFlightContact(OfflineUpdateFlightContactRequestType request);
+    ReminderKefuNoticeResponseType reminderKefuNotice(ReminderKefuNoticeRequestType request);
+    ReminderVendorNoticeResponseType reminderVendorNotice(ReminderVendorNoticeRequestType request);
+    getVendorNoticeNumResponse getVendorNoticeNum(getVendorNoticeNumRequest request);
+}

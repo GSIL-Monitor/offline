@@ -1,0 +1,2345 @@
+/*Created by huang.jun on 17-09-6*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font: 12px/1.5 "Microsoft yahei", PingFang SC Regular, arial, Simsun, sans-serif;
+  background: #F5F8FE;
+  color: #222;
+}
+html,
+body {
+  height: 100%;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  background: #000;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+}
+article {
+  background: #FFD35E;
+}
+.img-box {
+  font-size: 0;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Remarks {
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  width: 495px;
+  height: 329px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 200;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.Remarks dt {
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 30px;
+}
+.Remarks dd {
+  margin-top: 32px;
+  position: relative;
+  width: 384px;
+  height: 142px;
+  padding: 0 0 0 80px;
+}
+.Remarks dd textarea {
+  width: 100%;
+  height: 140px;
+  border: 1px solid #ECECEC;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  resize: none;
+  padding: 4px;
+  font-size: 14px;
+}
+.Remarks dd .BtnBox {
+  margin-top: 22px;
+}
+.Remarks dd .BtnBox:after,
+.Remarks dd .BtnBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Remarks dd .BtnBox a {
+  width: 178px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.Remarks dd .BtnBox a:nth-child(odd) {
+  float: left;
+  color: #666;
+  padding-left: 10px;
+  border: 1px solid #ECECEC;
+  color: #19A0F0;
+}
+.Remarks dd .BtnBox a:nth-child(even) {
+  float: right;
+  padding-right: 10px;
+  background: #00A0FF;
+  color: #fff;
+}
+.Remarks dd span {
+  position: absolute;
+  left: 34px;
+  top: 4px;
+  font-size: 14px;
+}
+.bz {
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 750px;
+  padding: 38px;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 200;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.bz table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.bz table td,
+.bz table th {
+  border: 1px solid #ECECEC;
+  text-align: center;
+  font-weight: normal;
+}
+.bz table th {
+  background: #F5F5F5;
+  height: 40px;
+}
+.bz table td {
+  padding: 19px 0;
+}
+.bz table td p {
+  padding: 0 15px;
+  text-align: left;
+  line-height: 20px;
+}
+.bz .Btn {
+  margin-top: 38px;
+}
+.bz .Btn a {
+  display: block;
+  width: 139px;
+  height: 40px;
+  background: #00A0FF;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.details {
+  border: 1px solid rgba(25, 160, 240, 0.3);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  width: 250px;
+  padding: 0 22px;
+  font-size: 13px;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 8px rgba(25, 160, 240, 0.3);
+  -webkit-box-shadow: 0px 0px 8px rgba(25, 160, 240, 0.3);
+  box-shadow: 0px 0px 8px rgba(25, 160, 240, 0.3);
+  left: -84px;
+  top: 46px;
+  color: #222;
+}
+.details:after {
+  position: absolute;
+  content: "";
+  top: -11px;
+  left: 50%;
+  width: 17px;
+  height: 11px;
+  background: url("../img/rectangle.png") no-repeat;
+  margin-left: -10.5px;
+}
+.details h4 {
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  padding-top: 15px;
+}
+.details div {
+  border-top: 1px dashed #ECECEC;
+  line-height: 50px;
+}
+.details div:after,
+.details div:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.details div:nth-of-type(1) {
+  border: 0;
+}
+.details div cite {
+  font-style: normal;
+}
+.details div cite:nth-child(odd) {
+  float: left;
+  color: #666;
+  padding-left: 10px;
+}
+.details div cite:nth-child(even) {
+  float: right;
+  padding-right: 10px;
+}
+.tpsm {
+  width: 368px;
+  background: #fff;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.tpsm h4 {
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+.tpsm ul li {
+  height: 16px;
+  position: relative;
+  line-height: 16px;
+  margin-top: 24px;
+}
+.tpsm ul li small,
+.tpsm ul li span {
+  position: relative;
+  background: #fff;
+  font-size: 16px;
+  z-index: 12;
+}
+.tpsm ul li span {
+  float: left;
+  padding-right: 10px;
+}
+.tpsm ul li small {
+  float: right;
+  color: #FF6913;
+  min-width: 70px;
+  text-align: right;
+}
+.tpsm ul li:after {
+  border-top: 1px dashed #ccc;
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+.tpsm .txt {
+  text-align: center;
+  font-size: 13px;
+  line-height: 13px;
+  color: #999;
+  margin-top: 28px;
+}
+.tpsm .txt span {
+  position: relative;
+  padding-left: 10px;
+}
+.tpsm .txt span:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #ccc;
+  left: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+.tpsm .btnbox {
+  margin-top: 28px;
+}
+.tpsm .btnbox:after,
+.tpsm .btnbox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.tpsm .btnbox a {
+  width: 139px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #00A0FF;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+.tpsm .btnbox a:nth-child(odd) {
+  float: left;
+}
+.tpsm .btnbox a:nth-child(even) {
+  float: right;
+}
+.tp {
+  width: 368px;
+  height: 181px;
+  background: #fff;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+}
+.tp dt {
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 54px;
+}
+.tp dd {
+  padding-top: 34px;
+}
+.tp dd a {
+  width: 139px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background: #00A0FF;
+  display: block;
+  margin: 0 auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.InvoiceWrap {
+  background: #fff;
+  padding: 20px 0px 20px 20px;
+  position: relative;
+  height: 1000px;
+}
+.InvoiceWrap .TopNav:after,
+.InvoiceWrap .TopNav:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.InvoiceWrap .TopNav li {
+  color: #999;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  float: left;
+  margin-left: 52px;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 8px;
+}
+.InvoiceWrap .TopNav li:nth-of-type(1) {
+  margin-left: 0;
+}
+.InvoiceWrap .TopNav li.on {
+  color: #19A0F0;
+  border-bottom: 3px solid #19A0F0;
+}
+.InvoiceWrap .inpuList {
+  margin-top: 39px;
+  width: 1041px;
+}
+.InvoiceWrap .inpuList .ddh:after,
+.InvoiceWrap .inpuList .ddh:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.InvoiceWrap .inpuList .ddh li {
+  float: left;
+  margin-left: 96px;
+}
+.InvoiceWrap .inpuList .ddh li .w170 {
+  width: 158px;
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #ECECEC;
+  padding-left: 10px;
+  font-size: 14px;
+  float: left;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.InvoiceWrap .inpuList .ddh li:nth-of-type(1) {
+  margin-left: 0;
+}
+.InvoiceWrap .inpuList .lfrt {
+  margin-top: 10px;
+}
+.InvoiceWrap .inpuList .lfrt:after,
+.InvoiceWrap .inpuList .lfrt:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.InvoiceWrap .inpuList .lfrt li {
+  min-height: 36px;
+}
+.InvoiceWrap .inpuList .lfrt li:nth-child(odd) {
+  float: left;
+  width: 90px;
+}
+.InvoiceWrap .inpuList .lfrt li:nth-child(even) {
+  float: right;
+  width: 900px;
+  padding-right: 50px;
+}
+.InvoiceWrap .inpuList .lfrt li:nth-child(even) label {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.InvoiceWrap .inpuList .lfrt li:nth-child(even) label span {
+  padding-right: 30px;
+}
+.InvoiceWrap .inpuList .lfrt li label {
+  float: left;
+}
+.InvoiceWrap .inpuList .lfrt li label em {
+  width: 18px;
+  height: 18px;
+  background: url("../img/checkBox1.png") no-repeat;
+  background-size: 100% 100%;
+  float: left;
+  margin: 0px 8px 0 0;
+}
+.InvoiceWrap .inpuList .lfrt li label em.cb1,
+.InvoiceWrap .inpuList .lfrt li label em.cb2 {
+  cursor: pointer;
+}
+.InvoiceWrap .inpuList .lfrt li label em.cb1 {
+  background: url("../img/checkBox2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.InvoiceWrap .inpuList .lfrt li label em.cb2 {
+  background: url("../img/checkBox3.png") no-repeat;
+  background-size: 100% 100%;
+}
+.InvoiceWrap .inpuList .lfrt li .yuyue {
+  float: left;
+  margin-left: 103px;
+}
+.InvoiceWrap .inpuList .lfrt li .yuyue span {
+  float: left;
+  font-size: 14px;
+  line-height: 36px;
+}
+.InvoiceWrap .inpuList .lfrt li .yuyue div {
+  float: left;
+  border: 1px solid #ECECEC;
+  background: #ECECEC;
+  margin-left: 6px;
+}
+.InvoiceWrap .inpuList .lfrt li .yuyue div input {
+  border: 0;
+  height: 34px;
+  width: 183px;
+  float: left;
+}
+.InvoiceWrap .inpuList .lfrt li .yuyue div i {
+  width: 36px;
+  height: 34px;
+  background: url("../img/time.png") no-repeat center center;
+  background-size: 20px 18px;
+  float: left;
+  cursor: pointer;
+}
+.InvoiceWrap .inpuList .lfrt li .yuyue cite {
+  float: left;
+  line-height: 36px;
+  color: #19A0F0;
+  font-size: 13px;
+  font-style: normal;
+  margin-left: 14px;
+  cursor: pointer;
+}
+.InvoiceWrap .inpuList .lfrt li textarea {
+  width: 796px;
+  height: 98px;
+  border: 1px solid #ECECEC;
+  padding: 10px;
+  margin-top: 8px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.InvoiceWrap .inpuList .lfrt li .Btn {
+  margin-top: 30px;
+}
+.InvoiceWrap .inpuList .lfrt li .Btn a {
+  display: block;
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  background: #00A0FF;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.InvoiceWrap .label90 {
+  width: 90px;
+  float: left;
+  line-height: 36px;
+}
+.InvoiceWrap .label90 small {
+  font-size: 18px;
+  color: #FF0000;
+  float: left;
+  width: 8px;
+  height: 8px;
+}
+.InvoiceWrap .label90 span {
+  font-size: 14px;
+  color: #222;
+  padding-left: 6px;
+  float: left;
+}
+.InvoiceWrap .fpTit {
+  font-size: 16px;
+  color: #222;
+  line-height: 16px;
+  margin-top: 40px;
+}
+.InvoiceWrap .InputList:after,
+.InvoiceWrap .InputList:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.InvoiceWrap .InputList li {
+  font-size: 14px;
+  line-height: 38px;
+  margin-top: 27px;
+}
+.InvoiceWrap .InputList li:nth-child(odd) {
+  float: left;
+  width: 126px;
+}
+.InvoiceWrap .InputList li:nth-child(even) {
+  float: right;
+  width: 914px;
+}
+.InvoiceWrap .InputList li input {
+  width: 370px;
+  height: 38px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 12px;
+  border: 1px solid #ECECEC;
+  font-size: 14px;
+  float: left;
+}
+.InvoiceWrap .InputList li input::-webkit-input-placeholder {
+  color: #ccc;
+}
+.InvoiceWrap .InputList li input:-moz-placeholder {
+  color: #ccc;
+}
+.InvoiceWrap .InputList li input::-moz-placeholder {
+  color: #ccc;
+}
+.InvoiceWrap .InputList li input:-ms-input-placeholder {
+  color: #ccc;
+}
+.InvoiceWrap .InputList li textarea {
+  width: 370px;
+  height: 122px;
+  border: 1px solid #ECECEC;
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 12px;
+  float: left;
+}
+.InvoiceWrap .InputList li i {
+  float: left;
+  font-size: 18px;
+  color: #FF0000;
+  padding-left: 10px;
+}
+.InvoiceWrap .InputList li small {
+  font-size: 12px;
+  padding-left: 13px;
+}
+.InvoiceWrap .InputList li .ml36 {
+  margin-left: 36px;
+}
+.InvoiceWrap .InputList li a {
+  color: #19A0F0;
+}
+.InvoiceWrap .InputList li label {
+  float: left;
+}
+.InvoiceWrap .InputList li label.ml74 {
+  margin-left: 74px;
+}
+.InvoiceWrap .InputList li label em {
+  width: 18px;
+  height: 18px;
+  background: url("../img/checkBox1.png") no-repeat;
+  background-size: 100% 100%;
+  float: left;
+  margin: 10px 10px 0 0;
+}
+.InvoiceWrap .InputList li label em.cb1,
+.InvoiceWrap .InputList li label em.cb2 {
+  cursor: pointer;
+}
+.InvoiceWrap .InputList li label em.cb1 {
+  background: url("../img/checkBox2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.InvoiceWrap .InputList li label em.cb2 {
+  background: url("../img/checkBox3.png") no-repeat;
+  background-size: 100% 100%;
+}
+.ddTab {
+  margin-top: 48px;
+  width: 100%;
+  border-collapse: collapse;
+}
+.ddTab td,
+.ddTab th {
+  border: 1px solid #ECECEC;
+  text-align: center;
+  font-weight: normal;
+}
+.ddTab th {
+  font-size: 13px;
+  background: #F5F5F5;
+  color: #666;
+  height: 40px;
+}
+.ddTab th:nth-of-type(1) {
+  text-align: left;
+  padding-left: 96px;
+  position: relative;
+}
+.ddTab th:nth-of-type(1) em {
+  width: 18px;
+  height: 18px;
+  background: url("../img/checkBox1.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 18px;
+  top: 12px;
+}
+.ddTab th:nth-of-type(1) em.cb1,
+.ddTab th:nth-of-type(1) em.cb2 {
+  cursor: pointer;
+}
+.ddTab th:nth-of-type(1) em.cb1 {
+  background: url("../img/checkBox2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.ddTab th:nth-of-type(1) em.cb2 {
+  background: url("../img/checkBox3.png") no-repeat;
+  background-size: 100% 100%;
+}
+.ddTab th:last-child {
+  text-align: left;
+  padding-left: 35px;
+}
+.ddTab td {
+  font-size: 13px;
+  color: #222;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 16px 0;
+}
+.ddTab td:nth-of-type(1) {
+  text-align: left;
+  padding-left: 69px;
+}
+.ddTab td:nth-of-type(1) span {
+  position: relative;
+}
+.ddTab td:nth-of-type(1) em {
+  width: 18px;
+  height: 18px;
+  background: url("../img/checkBox1.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: -50px;
+  top: -2px;
+}
+.ddTab td:nth-of-type(1) em.cb1,
+.ddTab td:nth-of-type(1) em.cb2 {
+  cursor: pointer;
+}
+.ddTab td:nth-of-type(1) em.cb1 {
+  background: url("../img/checkBox2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.ddTab td:nth-of-type(1) em.cb2 {
+  background: url("../img/checkBox3.png") no-repeat;
+  background-size: 100% 100%;
+}
+.ddTab td a {
+  color: #19A0F0;
+}
+.ddTab td:last-child {
+  text-align: left;
+  padding-left: 0px;
+  padding-top: 0;
+}
+.ddTab td:last-child label {
+  float: left;
+  height: 18px;
+  margin-left: 22px;
+  margin-top: 14px;
+}
+.ddTab td:last-child label em {
+  width: 18px;
+  height: 18px;
+  background: url("../img/checkBox1.png") no-repeat;
+  background-size: 100% 100%;
+  float: left;
+  margin: 0px 8px 0 0;
+}
+.ddTab td:last-child label em.cb1,
+.ddTab td:last-child label em.cb2 {
+  cursor: pointer;
+}
+.ddTab td:last-child label em.cb1 {
+  background: url("../img/checkBox2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.ddTab td:last-child label em.cb2 {
+  background: url("../img/checkBox3.png") no-repeat;
+  background-size: 100% 100%;
+}
+.fpBtn {
+  margin-top: 39px;
+}
+.fpBtn:after,
+.fpBtn:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.fpBtn li {
+  float: left;
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  background: #00A0FF;
+  text-align: center;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.fpBtn li.cancel {
+  border: 1px solid #00A0FF;
+  background: #fff;
+  color: #00A0FF;
+}
+.fpBtn li:nth-of-type(1) {
+  margin-left: 10px;
+}
+.TopPz {
+  font-size: 20px;
+  line-height: 20px;
+  position: absolute;
+  padding-left: 20px;
+  left: 0;
+  top: 24px;
+  color: #436187;
+  font-weight: bold;
+}
+.TopPz:after {
+  width: 4px;
+  height: 17px;
+  background: #436187;
+  content: "";
+  left: 0;
+  top: 2px;
+  position: absolute;
+}
+.PzWrap {
+  background: #fff;
+  padding: 92px 70px 109px 97px;
+  position: relative;
+}
+.PzWrap h4,
+.PzWrap h5 {
+  font-size: 16px;
+  line-height: 16px;
+}
+.PzWrap h5 {
+  margin-top: 72px;
+  font-size: 16px;
+  line-height: 16px;
+}
+.PzWrap .mob {
+  line-height: 38px;
+  margin-top: 23px;
+}
+.PzWrap .mob:after,
+.PzWrap .mob:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.PzWrap .mob span {
+  font-size: 14px;
+  float: left;
+  width: 90px;
+  line-height: 36px;
+}
+.PzWrap .mob .txt370 {
+  height: 36px;
+  width: 370px;
+  border: 1px solid #ECECEC;
+  float: left;
+}
+.PzWrap .mob a {
+  float: left;
+  width: 96px;
+  height: 26px;
+  line-height: 26px;
+  background: #00A0FF;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin: 5px 0 0 10px;
+}
+.PzWrap .Voucher {
+  height: 122px;
+  margin-top: 20px;
+}
+.PzWrap .Voucher span {
+  font-size: 14px;
+  float: left;
+  width: 90px;
+  line-height: 36px;
+}
+.PzWrap .Voucher a {
+  float: left;
+  width: 120px;
+  height: 120px;
+  background: url("../img/add.png") no-repeat;
+  background-size: 100% 100%;
+}
+.PzWrap .pzl {
+  margin-top: 30px;
+}
+.PzWrap .pzl:after,
+.PzWrap .pzl:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.PzWrap .pzl li {
+  float: left;
+  font-size: 14px;
+}
+.PzWrap .pzl li:nth-of-type(2) {
+  margin-left: 53px;
+}
+.PzWrap .pzl li:nth-of-type(3) {
+  margin-left: 10px;
+}
+.PzWrap .browse {
+  width: 646px;
+  height: 347px;
+  border: 1px solid #F0F0F0;
+  background: #F7F7F7;
+  margin-top: 25px;
+}
+.PzWrap .JournalTab {
+  width: 100%;
+  border-collapse: collapse;
+}
+.PzWrap .JournalTab td,
+.PzWrap .JournalTab th {
+  border: 1px solid #ECECEC;
+  text-align: center;
+  font-weight: normal;
+}
+.PzWrap .JournalTab th {
+  height: 40px;
+  background: #F5F5F5;
+  color: #666;
+}
+.PzWrap .JournalTab th i {
+  display: inline-block;
+  width: 10px;
+  height: 12px;
+  background: url("../img/px.png") no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-left: 6px;
+  margin-top: -2px;
+  cursor: pointer;
+}
+.PzWrap .JournalTab td {
+  padding: 14px 0;
+  font-size: 13px;
+}
+.PzWrap .JournalTab td.BtnUp,
+.PzWrap .JournalTab td.BtnDown {
+  cursor: pointer;
+  position: relative;
+}
+.PzWrap .JournalTab td.BtnUp i {
+  -webkit-transform: scaleY(-1);
+}
+.PzWrap .JournalTab td.BtnDown i {
+  -webkit-transform: scaleY(1);
+}
+.PzWrap .JournalTab td i {
+  width: 10px;
+  height: 5px;
+  display: inline-block;
+  background: url("../img/down.png");
+  background-size: 100% 100%;
+  margin: -5px 0 0 4px;
+  vertical-align: middle;
+}
+.PzWrap .JournalTab td p {
+  text-align: left;
+  padding: 0 10px;
+  line-height: 20px;
+}
+.PzWrap .JournalTab td .content {
+  border: 1px solid rgba(25, 160, 240, 0.3);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  width: 712px;
+  padding: 0 22px;
+  font-size: 13px;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 8px rgba(25, 160, 240, 0.3);
+  -webkit-box-shadow: 0px 0px 8px rgba(25, 160, 240, 0.3);
+  box-shadow: 0px 0px 8px rgba(25, 160, 240, 0.3);
+  left: -40px;
+  top: 46px;
+  color: #222;
+  z-index: 1000;
+}
+.PzWrap .JournalTab td .content:after {
+  position: absolute;
+  content: "";
+  top: -11px;
+  left: 115px;
+  width: 17px;
+  height: 11px;
+  background: url("../img/rectangle.png") no-repeat;
+}
+.PzWrap .JournalTab td .content li {
+  height: 47px;
+  line-height: 47px;
+  font-size: 13px;
+  color: #222;
+  border-top: 1px dashed #ECECEC;
+}
+.PzWrap .JournalTab td .content li:after,
+.PzWrap .JournalTab td .content li:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.PzWrap .JournalTab td .content li span {
+  display: block;
+  float: left;
+}
+.PzWrap .JournalTab td .content li span:nth-of-type(1) {
+  width: 70px;
+  text-align: left;
+  padding-left: 10px;
+}
+.PzWrap .JournalTab td .content li span:nth-of-type(2) {
+  width: 320px;
+  text-align: left;
+}
+.PzWrap .JournalTab td .content li span:nth-of-type(3) {
+  width: 120px;
+}
+.PzWrap .JournalTab td .content li span:nth-of-type(4) {
+  width: 190px;
+}
+.PzWrap .JournalTab td .content li:nth-of-type(1) {
+  height: 48px;
+  border: 0;
+}
+.PzWrap .JournalTab td .content li:nth-of-type(1) span {
+  font-weight: bold;
+  line-height: 48px;
+}
+.PzWrap .JournalTab td .content li:nth-of-type(1) span:nth-of-type(1) {
+  padding-left: 0;
+  width: 80px;
+}
+.TopTit {
+  padding-left: 16px;
+  border-left: 4px solid #436187;
+}
+.TopTit:after,
+.TopTit:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopTit li {
+  float: left;
+  font-size: 13px;
+  color: #222;
+  line-height: 13px;
+  margin-top: 7px;
+}
+.TopTit li.title {
+  font-size: 20px;
+  line-height: 20px;
+  color: #436187;
+  font-weight: bold;
+  margin-top: 0;
+}
+.TopTit li.tjsj {
+  padding-left: 24px;
+}
+.TopTit li small {
+  color: #666;
+  font-size: 11px;
+  padding-left: 20px;
+}
+.TabBox table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.TabBox table td,
+.TabBox table th {
+  border: 1px solid #ECECEC;
+  text-align: center;
+  font-weight: normal;
+}
+.TabBox table th {
+  font-size: 13px;
+  background: #F5F5F5;
+  color: #666;
+  height: 40px;
+}
+.TabBox table td {
+  font-size: 13px;
+  color: #222;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.TabBox table td dl {
+  padding: 0 16px;
+}
+.TabBox table td dl dt {
+  text-align: left;
+}
+.TabBox table td dl dd {
+  margin-top: 6px;
+}
+.TabBox table td dl dd:after,
+.TabBox table td dl dd:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TabBox table td dl dd span:nth-child(odd) {
+  float: left;
+}
+.TabBox table td dl dd span:nth-child(even) {
+  float: right;
+}
+.noteslist {
+  color: #222;
+  padding: 10px 0;
+}
+.noteslist:after,
+.noteslist:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.noteslist li {
+  font-size: 12px;
+  line-height: 18px;
+}
+.time {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(25, 160, 240, 0.3);
+  position: absolute;
+  padding: 0 30px 20px 30px;
+  font-size: 13px;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 8px rgba(25, 160, 240, 0.3);
+  -webkit-box-shadow: 0px 0px 8px rgba(25, 160, 240, 0.3);
+  box-shadow: 0px 0px 8px rgba(25, 160, 240, 0.3);
+  z-index: 100;
+  text-align: left;
+  left: -144px;
+  top: 63px;
+  width: 340px;
+}
+.time:after {
+  position: absolute;
+  content: "";
+  top: -11px;
+  left: 50%;
+  width: 17px;
+  height: 11px;
+  background: url("../img/rectangle.png") no-repeat;
+  margin-left: -10.5px;
+}
+.time .Top {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: bold;
+  padding-top: 17px;
+  padding-left: 15px;
+}
+.time .Top:after,
+.time .Top:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.time .Top span {
+  float: left;
+}
+.time .Top span:nth-of-type(1) {
+  width: 148px;
+}
+.time .Top span:nth-of-type(2) {
+  width: 44px;
+  text-align: center;
+}
+.time .Top span:nth-of-type(3) {
+  width: 44px;
+  text-align: center;
+  margin-left: 20px;
+}
+.time .Top span:nth-of-type(4) {
+  width: 44px;
+  text-align: center;
+  margin-left: 20px;
+}
+.time .list {
+  border-left: 1px solid #ECECEC;
+  padding-left: 13px;
+  font-size: 13px;
+  color: #999;
+  margin-top: 18px;
+  line-height: 13px;
+}
+.time .list:after,
+.time .list:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.time .list span {
+  float: left;
+}
+.time .list span:nth-of-type(1) {
+  width: 148px;
+  position: relative;
+}
+.time .list span:nth-of-type(1):after {
+  left: -18.5px;
+  top: 1px;
+  width: 6px;
+  height: 6px;
+  border: 2px solid #ECECEC;
+  content: "";
+  position: absolute;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #fff;
+}
+.time .list span:nth-of-type(2) {
+  width: 44px;
+  text-align: center;
+}
+.time .list span:nth-of-type(3) {
+  width: 44px;
+  text-align: center;
+  margin-left: 20px;
+}
+.time .list span:nth-of-type(4) {
+  width: 44px;
+  text-align: center;
+  margin-left: 20px;
+}
+.time .list div {
+  margin-top: 26px;
+}
+.time .list div:after,
+.time .list div:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.time .list div.chufa {
+  margin-top: 0;
+}
+.time .list div.chufa span:after {
+  top: 0px;
+}
+.time .list div.daoda span:after {
+  bottom: -2px;
+  top: auto;
+}
+.time .list div.blue span {
+  color: #222;
+}
+.time .list div.blue span:after {
+  border: 2px solid #19A0F0;
+}
+.time .list div.blue span.blueTxt {
+  color: #19A0F0;
+}
+.GradeList {
+  border: 1px solid rgba(25, 160, 240, 0.3);
+  width: 130px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  padding: 0 17px 0 17px;
+  font-size: 13px;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 8px rgba(25, 160, 240, 0.3);
+  -webkit-box-shadow: 0px 0px 8px rgba(25, 160, 240, 0.3);
+  box-shadow: 0px 0px 8px rgba(25, 160, 240, 0.3);
+}
+.GradeList:after {
+  position: absolute;
+  content: "";
+  top: -11px;
+  left: 50%;
+  width: 17px;
+  height: 11px;
+  background: url("../img/rectangle.png") no-repeat;
+  margin-left: -10.5px;
+}
+.GradeList dt:after,
+.GradeList dd:after,
+.GradeList dt:before,
+.GradeList dd:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.GradeList dt span:nth-child(odd),
+.GradeList dd span:nth-child(odd) {
+  float: left;
+}
+.GradeList dt span:nth-child(even),
+.GradeList dd span:nth-child(even) {
+  float: right;
+}
+.GradeList dt {
+  height: 40px;
+  line-height: 40px;
+  color: #222;
+}
+.GradeList dd {
+  height: 36px;
+  line-height: 36px;
+  color: #666;
+  border-top: 1px dashed #ECECEC;
+}
+.header {
+  background: #436187;
+  height: 56px;
+}
+.header dl {
+  width: 1260px;
+  margin: 0 auto;
+  height: 56px;
+}
+.header dl:after,
+.header dl:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.header dl dt {
+  float: left;
+}
+.header dl dt a {
+  display: block;
+  height: 56px;
+  line-height: 56px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+.header dl dd {
+  float: right;
+  font-size: 12px;
+}
+.header dl dd:after,
+.header dl dd:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.header dl dd span {
+  float: left;
+  margin-top: 24px;
+  padding: 0 18px;
+  border-left: 1px solid #979797;
+  height: 12px;
+  line-height: 12px;
+}
+.header dl dd span:nth-of-type(1) {
+  border: 0;
+}
+.header dl dd span a {
+  color: #fff;
+}
+.WrapDetails {
+  width: 1260px;
+  margin: 0 auto;
+  position: relative;
+}
+.WrapDetails:after,
+.WrapDetails:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.WrapDetails .righter {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.WrapDetails .lefter {
+  width: 1000px;
+  float: left;
+}
+.WrapDetails .lefter .state {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 18px;
+  font-size: 15px;
+}
+.WrapDetails .lefter .state:after,
+.WrapDetails .lefter .state:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.WrapDetails .lefter .state li {
+  float: left;
+}
+.WrapDetails .lefter .state li:nth-of-type(1) {
+  font-weight: bold;
+}
+.WrapDetails .lefter .state li.red {
+  color: #FF0000;
+  font-size: 13px;
+  padding-left: 39px;
+  line-height: 52px;
+}
+.WrapDetails .lefter .state li.gray {
+  color: #666;
+  font-size: 13px;
+  padding-left: 10px;
+}
+.WrapDetails .lefter .state li.gray span {
+  float: left;
+  padding: 0 10px;
+  border-left: 1px solid #ccc;
+  line-height: 13px;
+  margin-top: 18px;
+}
+.WrapDetails .lefter .OrderInfo {
+  background: #fff;
+  padding: 20px 127px 0px 0;
+  position: relative;
+}
+.WrapDetails .lefter .OrderInfo .log {
+  width: 67px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  color: #19A0F0;
+  font-size: 13px;
+  border: 1px solid #F5F5F5;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox {
+  padding-left: 20px;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox:after,
+.WrapDetails .lefter .OrderInfo .InfoBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .left {
+  width: 280px;
+  float: left;
+  padding-top: 18px;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .left li {
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px dashed #ECECEC;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .left li b {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  float: left;
+  width: 100px;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .left li span {
+  font-size: 13px;
+  color: #222;
+  float: left;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .left li i {
+  float: left;
+  width: 19px;
+  height: 19px;
+  background: url("../img/te.png") no-repeat;
+  background-size: 100% 100%;
+  margin: 12px 0 0 13px;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .right {
+  width: 560px;
+  float: right;
+  padding: 20px 0 20px 0;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .right li {
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px dashed #ECECEC;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .right li b {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  float: left;
+  width: 100px;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .right li dl {
+  float: left;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .right li dl dt {
+  float: left;
+  font-size: 13px;
+  color: #222;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .right li dl dd {
+  padding-left: 33px;
+  float: left;
+  position: relative;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .right li dl dd span {
+  float: left;
+  padding: 0 14px;
+  border-left: 1px solid #ECECEC;
+  font-size: 12px;
+  height: 9px;
+  line-height: 9px;
+  margin-top: 18px;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .right li dl dd span a {
+  color: #19A0F0;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .right li dl dd span:nth-of-type(1) {
+  padding-left: 0;
+  border: 0;
+}
+.WrapDetails .lefter .OrderInfo .InfoBox .right li dl dd .icon {
+  width: 18px;
+  height: 12px;
+  float: left;
+  background: url("../img/mail.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: 18px;
+}
+.WrapDetails .lefter .ProductInfo {
+  background: #fff;
+  padding: 20px 0 20px 0;
+  margin-top: 8px;
+  min-height: 630px;
+}
+.WrapDetails .lefter .ProductInfo .cpTop,
+.WrapDetails .lefter .ProductInfo .cpBtm,
+.WrapDetails .lefter .ProductInfo .JsBtm {
+  padding: 0 20px;
+}
+.WrapDetails .lefter .ProductInfo .cpTop .Stit {
+  margin-top: 28px;
+  position: relative;
+}
+.WrapDetails .lefter .ProductInfo .cpBtm .Stit {
+  margin-top: 29px;
+}
+.WrapDetails .lefter .ProductInfo .cpBtm .Stit:nth-of-type(1) {
+  margin-top: 8px;
+}
+.WrapDetails .lefter .ProductInfo .JsBtm .Stit {
+  margin-top: 20px;
+}
+.WrapDetails .lefter .ProductInfo .TicketInfo,
+.WrapDetails .lefter .ProductInfo .Sp {
+  padding: 0 0 9px 0;
+  margin-top: 30px;
+}
+.WrapDetails .lefter .ProductInfo .TicketInfo:after,
+.WrapDetails .lefter .ProductInfo .Sp:after,
+.WrapDetails .lefter .ProductInfo .TicketInfo:before,
+.WrapDetails .lefter .ProductInfo .Sp:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.WrapDetails .lefter .ProductInfo .TicketInfo dt,
+.WrapDetails .lefter .ProductInfo .Sp dt {
+  font-size: 16px;
+  line-height: 16px;
+  color: #222;
+  float: left;
+  font-weight: bold;
+}
+.WrapDetails .lefter .ProductInfo .TicketInfo dd,
+.WrapDetails .lefter .ProductInfo .Sp dd {
+  float: right;
+}
+.WrapDetails .lefter .ProductInfo .TicketInfo dd a,
+.WrapDetails .lefter .ProductInfo .Sp dd a {
+  float: left;
+  width: 96px;
+  height: 26px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+  margin-left: 30px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.WrapDetails .lefter .ProductInfo .TicketInfo dd a.a,
+.WrapDetails .lefter .ProductInfo .Sp dd a.a {
+  color: #19A0F0;
+  border: 1px solid #ECECEC;
+}
+.WrapDetails .lefter .ProductInfo .TicketInfo dd a.b,
+.WrapDetails .lefter .ProductInfo .Sp dd a.b {
+  color: #fff;
+  background: #19A0F0;
+  border: 1px solid #19A0F0;
+}
+.WrapDetails .lefter .ProductInfo .TabBox {
+  padding: 0 0;
+}
+.WrapDetails .lefter .ProductInfo .TabBox td {
+  padding: 12px 0;
+}
+.WrapDetails .lefter .ProductInfo .TabBox td a {
+  color: #19A0F0;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo {
+  margin-top: 22px;
+  width: 100%;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo:after,
+.WrapDetails .lefter .ProductInfo .PassengerInfo:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt {
+  height: 33px;
+  line-height: 33px;
+  -webkit-border-radius: 33px;
+  -moz-border-radius: 33px;
+  border-radius: 33px;
+  border: 1px solid #ECECEC;
+  padding: 0 14px;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt:after,
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt span {
+  float: left;
+  font-size: 13px;
+  text-align: center;
+  color: #666;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt span:nth-of-type(1) {
+  width: 10%;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd {
+  position: relative;
+  padding: 16px 14px 16px 14px;
+  float: left;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd:nth-of-type(1):after {
+  display: none;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd span {
+  float: left;
+  font-size: 13px;
+  text-align: center;
+  color: #222;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd span i {
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  background: url("../img/sf.png") no-repeat;
+  background-size: 100% 100%;
+  margin-left: 5px;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd small {
+  font-size: 13px;
+  color: #A0A0A0;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd:after {
+  content: "";
+  position: absolute;
+  border-top: 1px dashed #ECECEC;
+  width: 910px;
+  left: 50%;
+  top: 0;
+  margin-left: -455px;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt span:nth-of-type(1),
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd span:nth-of-type(1) {
+  width: 65px;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt span:nth-of-type(2),
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd span:nth-of-type(2) {
+  width: 65px;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt span:nth-of-type(3),
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd span:nth-of-type(3) {
+  width: 70px;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt span:nth-of-type(4),
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd span:nth-of-type(4) {
+  width: 170px;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt span:nth-of-type(5),
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd span:nth-of-type(5) {
+  width: 140px;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt span:nth-of-type(6),
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd span:nth-of-type(6) {
+  width: 140px;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt span:nth-of-type(7),
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd span:nth-of-type(7) {
+  width: 90px;
+}
+.WrapDetails .lefter .ProductInfo .PassengerInfo dt span:nth-of-type(8),
+.WrapDetails .lefter .ProductInfo .PassengerInfo dd span:nth-of-type(8) {
+  width: 160px;
+}
+.WrapDetails .lefter .ProductInfo .SeeBtn {
+  text-align: right;
+}
+.WrapDetails .lefter .ProductInfo .SeeBtn span {
+  color: #19A0F0;
+  font-size: 12px;
+  line-height: 12px;
+  position: relative;
+  padding-right: 14px;
+  cursor: pointer;
+}
+.WrapDetails .lefter .ProductInfo .SeeBtn span:after {
+  position: absolute;
+  right: 0px;
+  top: 4px;
+  width: 10px;
+  height: 5px;
+  background: url("../img/down.png") no-repeat;
+  background-size: 100% 100%;
+  content: "";
+}
+.WrapDetails .lefter .ProductInfo .yp {
+  color: #ECECEC;
+  margin-top: 16px;
+}
+.WrapDetails .lefter .ProductInfo .yp table td,
+.WrapDetails .lefter .ProductInfo .yp table th,
+.WrapDetails .lefter .ProductInfo .yp table td a {
+  color: #999;
+}
+.WrapDetails .lefter .ProductInfo .yp .PassengerInfo dt span,
+.WrapDetails .lefter .ProductInfo .yp .PassengerInfo dd span {
+  color: #999;
+}
+.WrapDetails .lefter .ProductInfo .default .title {
+  font-size: 14px;
+  color: #666;
+  padding-left: 14px;
+  padding-top: 22px;
+}
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo {
+  margin-top: 16px;
+}
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dt span:nth-of-type(1),
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dd span:nth-of-type(1) {
+  width: 105px;
+}
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dt span:nth-of-type(2),
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dd span:nth-of-type(2) {
+  width: 160px;
+}
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dt span:nth-of-type(3),
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dd span:nth-of-type(3) {
+  width: 140px;
+}
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dt span:nth-of-type(4),
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dd span:nth-of-type(4) {
+  width: 120px;
+}
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dt span:nth-of-type(5),
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dd span:nth-of-type(5) {
+  width: 150px;
+}
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dt span:nth-of-type(6),
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dd span:nth-of-type(6) {
+  width: 150px;
+}
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dt span:nth-of-type(7),
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dd span:nth-of-type(7) {
+  width: 90px;
+}
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dt a,
+.WrapDetails .lefter .ProductInfo .default .PassengerInfo dd a {
+  color: #19A0F0;
+}
+.WrapDetails .lefter .ProductInfo .Sp {
+  margin-top: 50px;
+  padding-left: 0;
+}
+.WrapDetails .lefter .ProductInfo .Stit {
+  padding-left: 14px;
+  font-size: 14px;
+  line-height: 14px;
+  position: relative;
+  color: #222;
+  margin-bottom: 14px;
+}
+.WrapDetails .lefter .ProductInfo .Stit:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #ccc;
+  left: 0;
+  top: 4px;
+}
+.WrapDetails .lefter .ProductInfo .Stit small {
+  padding-left: 24px;
+  font-size: 13px;
+}
+.WrapDetails .lefter .ProductInfo .Stit i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url("../img/tips.png") no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin: -4px 0 0 5px;
+  cursor: pointer;
+}
+.WrapDetails .lefter .ProductInfo .TabBox2 {
+  margin-top: 16px;
+}
+.WrapDetails .lefter .ProductInfo .TabBox2 table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.WrapDetails .lefter .ProductInfo .TabBox2 table td,
+.WrapDetails .lefter .ProductInfo .TabBox2 table th {
+  border: 1px solid #ECECEC;
+  text-align: center;
+  font-weight: normal;
+}
+.WrapDetails .lefter .ProductInfo .TabBox2 table th {
+  font-size: 13px;
+  background: #F5F5F5;
+  color: #666;
+  height: 40px;
+}
+.WrapDetails .lefter .ProductInfo .TabBox2 table td {
+  font-size: 13px;
+  color: #222;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 40px;
+}
+.WrapDetails .lefter .ProductInfo .TabBox2 table td i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url("../img/tips.png") no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin: -4px 0 0 5px;
+  cursor: pointer;
+}
+.WrapDetails .lefter .ProductInfo .TabBox2 table td span {
+  padding-left: 17px;
+}
+.WrapDetails .lefter .ProductInfo .TabBox2 table td span a {
+  color: #19A0F0;
+}
+.WrapDetails .lefter .ProductInfo .TabBox2 table td span:nth-of-type(1) {
+  padding-left: 0;
+}
+.WrapDetails .righter {
+  width: 252px;
+  float: right;
+}
+.WrapDetails .righter .search {
+  padding-top: 8px;
+  position: relative;
+}
+.WrapDetails .righter .search:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: url("../img/sIcon.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 9px;
+  top: 18px;
+}
+.WrapDetails .righter .search input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ECECEC;
+  height: 35px;
+  padding-left: 32px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.WrapDetails .righter .search input::-webkit-input-placeholder {
+  color: #A5A5A5;
+}
+.WrapDetails .righter .search input:-moz-placeholder {
+  color: #A5A5A5;
+}
+.WrapDetails .righter .search input::-moz-placeholder {
+  color: #A5A5A5;
+}
+.WrapDetails .righter .search input:-ms-input-placeholder {
+  color: #A5A5A5;
+}
+.WrapDetails .righter .notes {
+  background: #fff;
+  margin-top: 6px;
+  padding: 20px;
+}
+.WrapDetails .righter .notes dl:after,
+.WrapDetails .righter .notes dl:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.WrapDetails .righter .notes dl dt {
+  float: left;
+  font-size: 20px;
+  line-height: 20px;
+  color: #436187;
+  position: relative;
+  font-weight: bold;
+}
+.WrapDetails .righter .notes dl dt:after {
+  position: absolute;
+  left: -20px;
+  top: 1px;
+  width: 4px;
+  height: 17px;
+  background: #436187;
+  content: "";
+}
+.WrapDetails .righter .notes dl dd {
+  float: right;
+  font-size: 13px;
+  line-height: 13px;
+  padding-top: 5px;
+}
+.WrapDetails .righter .notes dl dd a {
+  color: #19A0F0;
+}
+.WrapDetails .righter .notes .noteslist {
+  border-top: 1px dashed #ECECEC;
+}
+.WrapDetails .righter .notes .noteslist:nth-of-type(1) {
+  border-top: 0;
+}
+.WrapDetails .righter .notes .SeeMore {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+  line-height: 12px;
+  border-top: 1px dashed #ECECEC;
+  padding-top: 15px;
+  margin-bottom: -5px;
+}
+.WrapDetails .righter .notes .SeeMore a {
+  color: #999;
+}
+.WrapDetails .righter .notes .NoticeList {
+  padding-top: 10px;
+}
+.WrapDetails .righter .notes .NoticeList:after,
+.WrapDetails .righter .notes .NoticeList:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.WrapDetails .righter .notes .NoticeList li {
+  width: 98px;
+  height: 26px;
+  line-height: 26px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 13px;
+  background: #ECECEC;
+  margin-top: 14px;
+  position: relative;
+  cursor: pointer;
+}
+.WrapDetails .righter .notes .NoticeList li:nth-child(odd) {
+  float: left;
+}
+.WrapDetails .righter .notes .NoticeList li:nth-child(even) {
+  float: right;
+}
+.WrapDetails .righter .notes .NoticeList li span {
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  color: #fff;
+  font-size: 11px;
+  background: #FF0000;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+.WrapDetails .righter .notes .contact {
+  border-top: 1px dashed #ECECEC;
+  margin-bottom: -20px;
+  margin-top: 15px;
+}
+.WrapDetails .righter .notes .contact:after,
+.WrapDetails .righter .notes .contact:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.WrapDetails .righter .notes .contact li {
+  font-size: 12px;
+  color: #19A0F0;
+  line-height: 12px;
+  padding: 19px 0;
+  cursor: pointer;
+}
+.WrapDetails .righter .notes .contact li:nth-child(odd) {
+  float: left;
+}
+.WrapDetails .righter .notes .contact li:nth-child(even) {
+  float: right;
+}
+.WrapDetails .righter .notes .contact li span {
+  color: #FF0000;
+}
+.WrapDetails .righter .notes .NotifyList {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.WrapDetails .righter .notes .NotifyList li {
+  line-height: 46px;
+  border-bottom: 1px dashed #ECECEC;
+  color: #222;
+  cursor: pointer;
+}
+.WrapDetails .righter .notes .NotifyList li i {
+  background: url("../img/hot.png") no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 22px;
+  height: 12px;
+  margin-left: 5px;
+}
+.Activity {
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+  color: #666;
+}
+.Activity a {
+  color: #19A0F0;
+}
+.Activity span {
+  color: #D8D8D8;
+  font-size: 15px;
+  padding: 0 10px;
+}
+.OrderBox {
+  background: #fff;
+  padding-top: 24px;
+}
+.OrderBox .OrderTit {
+  height: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  color: #436187;
+  padding-left: 20px;
+  position: relative;
+}
+.OrderBox .OrderTit:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 17px;
+  left: 0;
+  top: 50%;
+  margin-top: -8.5px;
+  background: #436187;
+}
+.OrderBox .OrderWrap {
+  width: 960px;
+  margin: 0 auto;
+  padding-bottom: 44px;
+}
+.OrderBox .OrderWrap .TopSummary {
+  color: #222;
+  margin-top: 32px;
+  margin-bottom: 10px;
+}
+.OrderBox .OrderWrap .TopSummary:after,
+.OrderBox .OrderWrap .TopSummary:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.OrderBox .OrderWrap .TopSummary dt {
+  float: left;
+  font-size: 16px;
+  line-height: 16px;
+}
+.OrderBox .OrderWrap .TopSummary dd {
+  float: right;
+  font-size: 14px;
+  line-height: 14px;
+}
+.OrderBox .OrderWrap .OrderTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.OrderBox .OrderWrap .OrderTable th,
+.OrderBox .OrderWrap .OrderTable td {
+  border: 1px solid #ECECEC;
+  text-align: center;
+  font-weight: normal;
+}
+.OrderBox .OrderWrap .OrderTable th {
+  height: 40px;
+  background: #F5F5F5;
+  color: #666;
+}
+.OrderBox .OrderWrap .OrderTable td {
+  padding: 10px 0;
+}
+.OrderBox .OrderWrap .OrderTable td a {
+  color: #19A0F0;
+}
+.OrderBox .OrderWrap .OrderTable td i {
+  font-style: normal;
+  display: block;
+}
+.OrderBox .OrderWrap .OrderTable td i.red {
+  font-size: 12px;
+  color: #FF0000;
+}
+.OrderBox .OrderWrap .PI {
+  margin-top: 22px;
+  width: 100%;
+}
+.OrderBox .OrderWrap .PI:after,
+.OrderBox .OrderWrap .PI:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.OrderBox .OrderWrap .PI dt {
+  height: 33px;
+  line-height: 33px;
+  -webkit-border-radius: 33px;
+  -moz-border-radius: 33px;
+  border-radius: 33px;
+  border: 1px solid #ECECEC;
+  padding: 0 14px;
+}
+.OrderBox .OrderWrap .PI dt:after,
+.OrderBox .OrderWrap .PI dt:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.OrderBox .OrderWrap .PI dt span {
+  float: left;
+  font-size: 13px;
+  text-align: center;
+  color: #666;
+}
+.OrderBox .OrderWrap .PI dt span:nth-of-type(1) {
+  width: 10%;
+}
+.OrderBox .OrderWrap .PI dd {
+  position: relative;
+  padding: 16px 14px 16px 14px;
+  float: left;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.OrderBox .OrderWrap .PI dd:nth-of-type(1):after {
+  display: none;
+}
+.OrderBox .OrderWrap .PI dd span {
+  float: left;
+  font-size: 13px;
+  text-align: center;
+  color: #222;
+}
+.OrderBox .OrderWrap .PI dd span i {
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  background: url("../img/sf.png") no-repeat;
+  background-size: 100% 100%;
+  margin-left: 5px;
+}
+.OrderBox .OrderWrap .PI dd small {
+  font-size: 13px;
+  color: #A0A0A0;
+}
+.OrderBox .OrderWrap .PI dd:after {
+  content: "";
+  position: absolute;
+  border-top: 1px dashed #ECECEC;
+  width: 910px;
+  left: 50%;
+  top: 0;
+  margin-left: -455px;
+}
+.OrderBox .OrderWrap .PI dd em {
+  width: 18px;
+  height: 18px;
+  background: url("../img/checkBox1.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: -24px;
+  top: 16px;
+}
+.OrderBox .OrderWrap .PI dd em.cb1,
+.OrderBox .OrderWrap .PI dd em.cb2 {
+  cursor: pointer;
+}
+.OrderBox .OrderWrap .PI dd em.cb1 {
+  background: url("../img/checkBox2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.OrderBox .OrderWrap .PI dd em.cb2 {
+  background: url("../img/checkBox3.png") no-repeat;
+  background-size: 100% 100%;
+}
+.OrderBox .OrderWrap .PI dt span:nth-of-type(1),
+.OrderBox .OrderWrap .PI dd span:nth-of-type(1) {
+  width: 65px;
+}
+.OrderBox .OrderWrap .PI dt span:nth-of-type(2),
+.OrderBox .OrderWrap .PI dd span:nth-of-type(2) {
+  width: 65px;
+}
+.OrderBox .OrderWrap .PI dt span:nth-of-type(3),
+.OrderBox .OrderWrap .PI dd span:nth-of-type(3) {
+  width: 70px;
+}
+.OrderBox .OrderWrap .PI dt span:nth-of-type(4),
+.OrderBox .OrderWrap .PI dd span:nth-of-type(4) {
+  width: 170px;
+}
+.OrderBox .OrderWrap .PI dt span:nth-of-type(5),
+.OrderBox .OrderWrap .PI dd span:nth-of-type(5) {
+  width: 140px;
+}
+.OrderBox .OrderWrap .PI dt span:nth-of-type(6),
+.OrderBox .OrderWrap .PI dd span:nth-of-type(6) {
+  width: 140px;
+}
+.OrderBox .OrderWrap .PI dt span:nth-of-type(7),
+.OrderBox .OrderWrap .PI dd span:nth-of-type(7) {
+  width: 90px;
+}
+.OrderBox .OrderWrap .PI dt span:nth-of-type(8),
+.OrderBox .OrderWrap .PI dd span:nth-of-type(8) {
+  width: 160px;
+}
+.OrderBox .OrderWrap .PI dt span.orange,
+.OrderBox .OrderWrap .PI dd span.orange {
+  color: #FF6913;
+}
+.OrderBox .OrderWrap .GrayList dt span {
+  color: #666;
+}
+.OrderBox .OrderWrap .GrayList dd span {
+  color: #999;
+}
+.OrderBox .OrderWrap .Algorithm {
+  width: 354px;
+  border-collapse: collapse;
+  font-size: 13px;
+  border-bottom: 1px solid #ECECEC;
+}
+.OrderBox .OrderWrap .Algorithm th,
+.OrderBox .OrderWrap .Algorithm td {
+  border: 1px solid #ECECEC;
+  text-align: center;
+  font-weight: normal;
+}
+.OrderBox .OrderWrap .Algorithm th {
+  height: 40px;
+  background: #F5F5F5;
+}
+.OrderBox .OrderWrap .Algorithm td {
+  color: #666;
+  border-top: 0;
+  border-bottom: 0;
+  height: 40px;
+}
+.OrderBox .OrderWrap .tabTips {
+  font-size: 13px;
+  margin-top: 12px;
+}
+.OrderBox .OrderWrap .tabTips dt {
+  color: #666;
+  line-height: 12px;
+}
+.OrderBox .OrderWrap .tabTips dd {
+  margin-top: 23px;
+}
+.OrderBox .OrderWrap .tabTips dd a {
+  width: 212px;
+  height: 40px;
+  line-height: 44px;
+  text-align: center;
+  display: block;
+  color: #fff;
+  background: #00A0FF;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}

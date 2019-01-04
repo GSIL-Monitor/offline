@@ -1,0 +1,673 @@
+.pubGlobal_w1px {
+    width:1px;
+    overflow:hidden;
+}
+.pubGlobal_h1px {
+    height:1px;
+    overflow:hidden;
+}
+.pubGlobal_h5px {
+    height:5px;
+    overflow:hidden;
+}
+.pubGlobal_h10px {
+    height:10px;
+    overflow:hidden;
+}
+.pubGlobal_h9px {
+    height:9px;
+    overflow:hidden;
+}
+.pubGlobal_pricecolor01
+{
+    font-family:"Courier New", Simsun;
+    font-size:12px;
+    color:#cf6600;
+    text-align:right;
+}
+
+.pubGlobal_noticecolor01
+{
+    font-family:Simsun;
+    font-size:12px;
+    color:#999999;
+}
+
+.pubGlobal_noticecolor02
+{
+    font-family:"Courier New", Simsun;
+    font-size:12px;
+    color:#000;
+}
+
+.pubGlobal_indispensablecolor01
+{
+
+    color:#FF0000;
+    padding: 0 4px 0 0;
+}
+
+#pubglobal_warp {
+    background:#FFF;
+    text-align:left;
+}
+.pubglobal_main{
+    width:760px;
+    display:block;
+    margin:0 auto;
+    overflow:hidden;
+    word-break:break-all;
+}
+
+#pubglobal_header {
+    line-height:60px;
+    padding:0 15px;
+    font-size:20px;
+    color:#FFF;
+    /*border-bottom:solid 3px #FF9913;*/
+    overflow:hidden;
+    margin:0px auto;
+    background:#386f96;
+    box-sizing:border-box;
+    text-align:left;
+}
+#pubglobal_header .topbar {
+    float:right;
+    font-size:12px;
+
+}
+#pubglobal_header .topbar a {
+    background:url(http://picint.sh.ctriptravel.com/template/icon_arrow07.gif) no-repeat left 2px;
+    padding-left:10px;
+    padding-right:8px;
+    color:#FFF;
+}
+
+#pubglobal_footer {
+    height:45px;
+    width:760px;
+    margin:0px auto;
+    padding-top:15px;
+    text-align:center;
+    line-height:18px;
+    clear:both;
+}
+#pubglobal_footer span {
+    font-family: Verdana, Arial, sans-serif;
+}
+
+.puboffline_content_title {
+    height:32px;
+    line-height:32px;
+    overflow:hidden;
+}
+
+.puboffline_member {
+    background:url(http://picint.sh.ctriptravel.com/template/icon_arrow01.gif) no-repeat 2px 2px;
+    padding-left:15px;
+}
+
+.puboffline_content_left01 {
+    width:250px;
+    height:336px;
+    overflow:auto;
+    border-top:solid 1px #369;
+    border-left:solid 1px #369;
+    border-bottom:solid 1px #369;
+    float:left;
+    background:#E6EEF7;
+}
+.puboffline_content_left01 li {
+    height:21px;
+    line-height:21px;
+    color:#003399;
+    padding-left:5px;
+}
+.puboffline_content_left01 li.choice {
+    background:#369;
+    color:#FFF;
+}
+.puboffline_content_left01 label {
+    cursor:pointer;
+}
+
+.puboffline_content_right01 {
+    width:508px;
+    height:336px;
+    overflow:auto;
+    border-top:solid 1px #369;
+    border-right:solid 1px #369;
+    border-bottom:solid 1px #369;
+    float:left;
+}
+.puboffline_content_right01 li {
+    height:24px;
+    line-height:24px;
+    padding-left:15px;
+    background:url(http://picint.sh.ctriptravel.com/template/icon_arrow01.gif) no-repeat 5px 8px;
+}
+.puboffline_content_right01 a {
+    font-size:14px;
+    color:#003399;
+    display:block;
+    height:24px;
+}
+.puboffline_content_right01 a:hover {
+    background:#369;
+    color:#FFF;
+}
+
+.pubGlobal_romList01
+{
+    margin:0;
+    padding:0;
+    width:100%;
+    background:#C7E2F3;
+}
+
+.pubGlobal_romList01 td
+{
+    padding:2px 2px;
+    line-height:15px;
+    height:20px;
+}
+
+.pubGlobal_romList02
+{
+    margin:0;
+    padding:0;
+    width:100%;
+    clear:both;
+    border-bottom:2px solid #1E7BAE;
+}
+
+.pubGlobal_romList02 th
+{
+    padding:4px 2px;
+    background:#1E7BAE;
+    color:#fff;
+    border-right:1px solid #B7CFE6;
+    text-align:center;
+    line-height:15px;
+    height:20px;
+    font-weight:normal;
+}
+
+.pubGlobal_romList02 td
+{
+    padding:4px 2px;
+    text-align:center;
+    border-right:1px solid #B7CFE6;
+    line-height:15px;
+    height:20px;
+}
+
+.pubGlobal_romList02 td.noline
+{
+    border-right:none;
+}
+.pubGlobal_romList02 td.footer
+{
+    border-bottom:2px solid #1E7BAE;
+}
+
+
+.pubGlobal_romList03
+{
+    margin:0;
+    padding:0;
+    width:100%;
+    clear:both;
+    border-top:1px solid #B7CFE6;
+
+}
+
+.pubGlobal_romList03 th
+{
+    padding:4px 2px;
+    background:#E6EEF7;
+    line-height:15px;
+    height:20px;
+    font-weight:normal;
+    padding-left:5px;
+    border-bottom:1px solid #B7CFE6;
+    width:130px;
+}
+
+.pubGlobal_romList03 td
+{
+    padding:4px 2px;
+    line-height:15px;
+    height:20px;
+    padding-left:5px;
+    background:#FFF;
+    border-bottom:1px solid #B7CFE6;
+}
+.pubGlobal_romList04
+{
+    margin:0;
+    padding:0;
+    width:100%;
+    clear:both;
+    border-bottom:2px solid #B7CFE6;
+}
+
+.pubGlobal_romList04 th
+{
+    padding:4px 2px;
+    background:#E6EEF7;
+    color:#000;
+    border-top:1px solid #B7CFE6;
+    border-bottom:1px solid #B7CFE6;
+    border-right:1px solid #B7CFE6;
+    text-align:center;
+    line-height:15px;
+    height:20px;
+}
+.pubGlobal_romList04 .noline
+{
+    border-right:none;
+}
+
+.pubGlobal_romList04 td
+{
+    padding:4px 2px;
+    text-align:center;
+    border-right:1px solid #B7CFE6;
+    line-height:15px;
+    height:20px;
+}
+
+
+.pubGlobal_nav01{
+    display:block;
+    width:100%;
+    overflow:hidden;
+}
+.pubGlobal_nav01 li {
+    float:left;
+    list-style:none;
+    padding:5px;
+    cursor:pointer;
+}
+.pubGlobal_nav01 li.nav01_nocurrent {
+    font-weight:normal;
+    background:#FFF;
+}
+.pubGlobal_nav01 li.nav01_current {
+    background:#C7E2F3;
+    font-weight:bold;
+}
+
+.pubGlobal_nav02{
+    display:block;
+    width:100%;
+    overflow:hidden;
+}
+.pubGlobal_nav02 li{
+    float:left;
+    list-style:none;
+    padding:5px;
+    cursor:pointer;
+}
+.pubGlobal_nav02 li.checked{
+    background:#1E7BAE;
+    font-weight:bold;
+    color:#fff;
+}
+
+.puboffline_content_left02 {
+    width:379px;
+    border-right:solid 1px #A9C6E2;
+    float:left;
+    padding:10px 0px;
+}
+.puboffline_content_left02 li{
+    list-style:none;
+    text-align:right;
+    line-height:24px;
+    height:24px;
+}
+.puboffline_content_left02 span{
+    width:270px;
+    text-align:left;
+    float:right;
+}
+
+.puboffline_content_right02 {
+    width:380px;
+    float:left;
+    padding:10px 0px;
+}
+.puboffline_content_right02 li{
+    list-style:none;
+    text-align:right;
+    line-height:24px;
+    height:24px;
+}
+.puboffline_content_right02 span{
+    width:270px;
+    text-align:left;
+    float:right;
+}
+.puboffline_content_center01 {
+    background:#E6EEF7;
+    padding:10px 0px;
+    margin:0 auto;
+}
+.puboffline_content_center01 li{
+    list-style:none;
+    text-align:right;
+    line-height:24px;
+    height:24px;
+}
+.puboffline_content_center01 span{
+    width:60%;
+    text-align:left;
+    float:right;
+}
+
+
+.puboffline_content01{
+    width:100%;
+    background:#E6EEF7;
+    zoom:1;
+    overflow:auto;
+}
+
+.puboffline_btn{
+    clear:both;
+    padding:10px;
+    text-align:center;
+}
+
+.puboffline_bg01
+{
+    background:#E6EEF7;
+}
+.puboffline_bg01_selected
+{
+    background:#FEF2D6;
+}
+
+.puboffline_arrowdown {
+    background:url(http://picint.sh.ctriptravel.com/template/icon_arrow02.gif) no-repeat left 3px;
+    margin-left:2px;
+    cursor:pointer;
+}
+.puboffline_arrowup {
+    background:url(http://picint.sh.ctriptravel.com/template/icon_arrow03.gif) no-repeat left 3px;
+    margin-left:2px;
+    cursor:pointer;
+}
+.puboffline_gift {
+    background:url(http://picint.sh.ctriptravel.com/template/icon_gift01.gif) no-repeat left -2px;
+    margin-left:2px;
+    padding:0 0 0 10px;
+}
+
+.puboffline_notice {
+    width:740px;
+    color:#000;
+    margin:10px auto;
+}
+.puboffline_notice td {
+    height:18px;
+}
+.puboffline_notice div {
+    color:#0066CC;
+}
+.puboffline_notice span {
+    color:#FF3300;
+}
+
+.puboffline_contect01 {
+    background:#E2ECF5;
+    border-top:solid 1px #1D65B6;
+}
+.puboffline_contectlist01 {
+    list-style:none;
+    overflow:hidden;
+    display:inline-block;
+}
+.puboffline_contectlist01 {
+    display:block;
+}
+.puboffline_contectlist01 li {
+    float:left;
+}
+.puboffline_contectlist01 li.left {
+    width:154px;
+}
+.puboffline_contectlist01 li.left a {
+    height:22px;
+    padding-left:20px;
+    line-height:22px;
+    color:#295378;
+    display:block;
+}
+.puboffline_contectlist01 li.left a:hover {
+    background:#295378 url(http://picint.sh.ctriptravel.com/template/icon_arrow04.gif) no-repeat 10px 7px;
+    color:#FFF;
+    text-decoration:none;
+}
+.puboffline_contectlist01 li.right {
+    width:604px;
+    min-height:425px;
+    background:#FFF;
+    padding-left:1px;
+    border-left:solid 1px #1D65B6;
+}
+* html .puboffline_contectlist01 li.right {
+    height:425px;
+}
+.puboffline_contectline01 {
+    width:148px;
+    height:1px;
+    overflow:hidden;
+    margin:0 auto;
+    background:#78A7D1;
+    border-bottom:solid 1px #FFF;
+}
+
+.puboffline_rightbar {
+    height:23px;
+    line-height:23px;
+    background:#E2ECF5;
+    padding-left:26px;
+    color:#295378;
+    margin:1px 0;
+}
+.puboffline_rightbar span {
+    float:right;
+    padding-top:1px;
+}
+.puboffline_rightbar a {
+    color:#003399;
+    padding-right:10px;
+    margin-right:30px;
+}
+
+.puboffline_rightbar .down {
+    background:url(http://picint.sh.ctriptravel.com/template/icon_arrow05.gif) no-repeat right 4px;
+}
+.puboffline_rightbar .up {
+    background:url(http://picint.sh.ctriptravel.com/template/icon_arrow06.gif) no-repeat right 4px;
+}
+.puboffline_rightbar .btn {
+    height:20px;
+}
+.puboffline_rightbar .textbox {
+    height:14px;
+    width:50px;
+}
+.puboffline_button{
+    background:url(http://picint.sh.ctriptravel.com/template/bg_button01.gif) repeat-x ;
+    height:26px;
+    margin:0px;
+    padding:0px;
+    color:#FFF;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+
+}
+
+.puboffline_button01 {
+    width:65px;
+    height:18px;
+    border:solid 1px #538CC7;
+    background:#FFF url(http://picint.sh.ctriptravel.com/template/icon_arrow00.gif) no-repeat 6% 4px;
+    color:#336699;
+    text-align:center;
+    overflow:hidden;
+    cursor:pointer;
+    font-size:12px;
+}
+.puboffline_button02 {
+    width:65px;
+    height:18px;
+    border:solid 1px #538CC7;
+    background:#FFF url(http://picint.sh.ctriptravel.com/template/icon_arrow01.gif) no-repeat 94% 4px;
+    color:#336699;
+    text-align:center;
+    overflow:hidden;
+    cursor:pointer;
+}
+.puboffline_button03{
+    background:url(http://picint.sh.ctriptravel.com/template/bg_button02.gif) repeat-x ;
+    height:22px;
+    margin:0px 2px;
+    padding:2px 2px 2px 4px;
+    color:#FFF;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+
+}
+
+.puboffline_btnwarp {
+    text-align:right;
+    padding:5px 0;
+}
+
+.puboffline_alert{
+    background:#FFF5E5;
+    margin:5px 0px;
+    padding:5px 10px;
+}
+
+.puboffline_currentwarp {
+    background:#E2ECF5;
+    padding:5px;
+    min-height:234px;
+}
+* html .puboffline_currentwarp {
+    height:250px;
+}
+
+.puboffline_current01 {
+}
+.puboffline_current01 textarea {
+    margin:0 2px;
+    width:400px;
+    height:50px;
+}
+.puboffline_current01 span {
+    margin-left:15px;
+}
+.puboffline_current01 dfn {
+    padding-right:5px;
+    font-style:normal;
+}
+.puboffline_current01 .behave {
+    display:block;
+}
+.puboffline_current01 .cursor {
+    cursor:pointer;
+}
+.puboffline_current01 .line {
+    border-top:dashed 1px #1E7BAE;
+    padding-top:5px;
+}
+.puboffline_current01 .added {
+    color:#1E7BAE;
+    padding-left:12px;
+}
+.puboffline_bg02 td{
+    background-color:#E0F1FC;
+}
+.puboffline_innertitle{
+    background:url(http://picint.sh.ctriptravel.com/template/icon_arrow01.gif) no-repeat 4px 8px;
+    padding-left:15px;
+    background-color:#CBDCEF;
+    float:left;
+    padding-top:4px;
+    height:20px;
+    margin:5px 0 5px 0;
+    width:100%;
+}
+.puboffline_floatdivstyle02
+{
+    border-bottom:1px dashed;
+    color:#0055aa;
+    cursor:pointer;
+}
+
+.puboffline_line01
+{
+    border-top:solid 2px #1E7BAE;
+    margin-top:10px;
+}
+
+/*新增样式*/
+.w80{width:80px;}
+.w100{width:100px;}
+.input-box{border:1px solid #e0e0e0;border-radius:3px;padding:0 5px;}
+.btn-blue{
+    background:#19a0f0;
+    height:32px;
+    border-radius:4px;
+    color:#fff;
+    border:0;
+    cursor:pointer;
+}
+.btn-orage{
+    background:#ff9913;
+    height:32px;
+    border-radius:4px;
+    color:#fff;
+    border:0;
+    cursor:pointer;
+}
+.btn-blue:disabled{
+    background:#ccc;
+    cursor:default;
+}
+.btn-grey-line{
+    border:1px solid #e0e0e0;
+    background:#fff;
+    color:#386f96;
+    cursor:pointer;
+    border-radius:4px;
+    box-sizing:border-box
+}
+
+.table-style1{
+    border-collapse:separate;
+    border-spacing:0 15px;
+}
+.table-style2 td{
+    padding:12px 8px;
+}
+.table-style3 td{
+    padding:5px;
+}
+.trblack{padding:0!important;}
+
+#enventlink a.btn-blue,#enventlink a.btn-orage{
+    color:#fff;height:25px;line-height:25px;display:inline-block;text-align:center;text-decoration:none;margin-bottom:10px;
+}
+#enventlink a.btn-grey-line{
+    color:#386f96;height:25px;line-height:25px;display:inline-block;text-align:center;text-decoration:none;margin-bottom:10px;
+}

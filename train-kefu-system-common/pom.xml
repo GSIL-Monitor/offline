@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.ctrip.train.kefu.system</groupId>
+        <artifactId>kefu-system</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>train-kefu-system-common</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!--公司框架-->
+        <dependency>
+            <groupId>qunar.tc.qconfig</groupId>
+            <artifactId>qconfig-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>qunar.common</groupId>
+            <artifactId>common-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ctrip.credis</groupId>
+            <artifactId>credis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dianping.cat</groupId>
+            <artifactId>cat-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ctrip.framework.clogging</groupId>
+            <artifactId>clogging-agent</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>qunar.tc</groupId>
+            <artifactId>qmq-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>qunar.tc</groupId>
+            <artifactId>qmq-dal</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--公司邮件接口-->
+        <dependency>
+            <groupId>com.ctrip.basebiz</groupId>
+            <artifactId>EmailServiceClient</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!--第三方-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.31</version>
+        </dependency>
+        <!--excel-->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.xmlbeans</groupId>
+                    <artifactId>xmlbeans</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.xmlbeans</groupId>
+            <artifactId>xmlbeans</artifactId>
+            <version>2.6.0.ctrip</version>
+        </dependency>
+    </dependencies>
+
+
+
+</project>
